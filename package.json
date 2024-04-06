@@ -9,7 +9,8 @@
   "scripts": {
     "build": "prisma generate && tsup",
     "dev": "tsup --watch",
-    "dev:vercel": "tsup --watch & vercel dev --listen 5005"
+    "dev:render": "tsup --watch & npm run start:render",
+    "start:render": "node dist/serverless.js"
   },
   "keywords": [
     "fastify",
