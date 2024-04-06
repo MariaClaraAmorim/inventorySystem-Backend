@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+// Define o modelo de dados para a coleção "Stock" no MongoDB.
+model Stock {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId // Define o campo de ID como uma String e configurações adicionais para o MongoDB
+  name         String // Define o campo "name" como uma String
+  category     String? // Define o campo "category" como uma String opcional
+  quantity     Int? // Define o campo "quantity" como um Inteiro opcional
+  barcode      String? // Define o campo "barcode" como um Inteiro opcional
+  description  String? // Define o campo "description" como um Inteiro opcional
+  imageUrl     String?
+  color        String? // Adiciona o campo "color" como uma String opcional
+  size         String?
+  costPrice    Float? // Campo para armazenar o valor de custo
+  sellingPrice Float? // Campo para armazenar o valor de venda
+  status       Boolean // Define o campo "status" como um Booleano
+  created_at   DateTime? @default(now()) // Define o campo "created_at" como uma Data e Hora opcional, com valor padrão definido como o momento atual
+  updated_at   DateTime? @default(now()) // Define o campo "updated_at" como uma Data e Hora opcional, com valor padrão definido como o momento atual
+
+  @@map("stock") // Mapeia este modelo para a coleção "stock" no MongoDB
+}
+
+model User {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  username String @unique
+  password String
+  role     Role   @default(USER)
+
+  @@map("user")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
