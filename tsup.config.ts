@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entryPoints: ['src/server.ts'],
-  format: ['esm'],
+  format: ['cjs'],
   clean: true,
   sourcemap: true,
   minify: false,

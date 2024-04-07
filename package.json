@@ -8,8 +8,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node src/server.ts",
-    "dev": "tsx watch src/server.ts"
+    "start": "node src/server.js",
+    "dev": "tsc --watch src/server.ts"
   },
   "keywords": [
     "fastify",
