@@ -7,9 +7,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "start:render": "node dist/server.js",
-    "dev": "tsc --watch"
+    "build:render": "tsc && node src/dist/server.js", 
+    "start:render": "node src/dist/server.js",
+    "dev": "tsc --watch src/server.ts"
   },
+  
   "keywords": [
     "fastify",
     "typescript",

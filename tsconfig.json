@@ -3,7 +3,7 @@
     "target": "es6",
     "module": "ESNext",
     "esModuleInterop": true,
-    "outDir": "./dist",  
+    "outDir": "./src/dist", // Atualizado para "./src/dist"
     "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
@@ -11,6 +11,11 @@
     "sourceMap": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
