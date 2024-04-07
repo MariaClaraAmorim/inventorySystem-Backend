@@ -1,7 +1,7 @@
 // users.controller.ts
 
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { listUsers } from '../services/UsersListService.js';
+import { listUsers } from '../services/UsersListService';
 
 // Controlador para lidar com a solicitação de listagem de usuários
 export async function getUsers(request: FastifyRequest, reply: FastifyReply) {

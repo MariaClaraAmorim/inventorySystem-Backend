@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { CurrentStockReportService } from '../../services/relatorios/CurrentStockReportService.js';
+import { CurrentStockReportService } from '../../services/relatorios/CurrentStockReportService';
 
 class CurrentStockReportController {
   async handle(request: FastifyRequest, reply: FastifyReply) {

@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { logout } from '../services/logoutService.js';
+import { logout } from '../services/logoutService';
 
 export async function logoutUser(
   request: FastifyRequest,

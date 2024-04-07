@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { Role } from '../models/User.js';
-import { createUser } from '../services/UserService.js';
+import { Role } from '../models/User';
+import { createUser } from '../services/UserService';
 
 export class RegisterUserController {
   async handle(request: FastifyRequest, reply: FastifyReply): Promise<void> {

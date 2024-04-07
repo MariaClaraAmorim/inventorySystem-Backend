@@ -1,6 +1,6 @@
 // Importa o objeto prismaClient que será utilizado para interagir com o banco de dados
 
-import prismaClient from '../prisma/index.js';
+import prismaClient from '../prisma/index';
 
 // Classe responsável por executar a lógica para listar estoque
 class ListStockService {

@@ -1,5 +1,5 @@
 // services/TotalSellingValueService.ts
-import StockProps from '../models/StockProps.js';
+import StockProps from '../models/StockProps';
 
 class TotalSellingValueService {
   calculateTotalSellingValue(products: StockProps[]): number {

@@ -1,7 +1,7 @@
 import cors from '@fastify/cors';
 import Fastify from 'fastify';
-import replyPlugin from './plugins/passPlugin.js';
-import { routes } from './routes.js';
+import replyPlugin from './plugins/passPlugin';
+import { routes } from './routes';
 
 const fastify = Fastify({ logger: true });
 

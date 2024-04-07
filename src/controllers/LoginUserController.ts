@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import jwt from 'jsonwebtoken';
-import { findUserByUsername } from '../services/findUserByUsername.js';
+import { findUserByUsername } from '../services/findUserByUsername';
 
 const SECRET_KEY = process.env.SECRET_KEY || 'sua_chave_secreta';
 const JWT_EXPIRATION_TIME = '1h';

@@ -1,26 +1,23 @@
 // Importações necessárias do Fastify para tipos e funcionalidades
 import { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 
-// Importações dos controladores para manipular as requisições
-import { countLowStockProducts } from './controllers/CountStockLow.js';
-import { getTotalSellingValueHandler } from './controllers/CountValueController.js';
-import { CreateStockController } from './controllers/CreateStockController.js';
-import { DeleteStockController } from './controllers/DeleteStockController.js';
-import { deleteUserHandler } from './controllers/DeleteUserController.js';
-import { ListStockController } from './controllers/ListStockController.js';
-import { LoginUserController } from './controllers/LoginUserController.js';
-import { RegisterUserController } from './controllers/RegisterUserController.js';
-import { getUsers } from './controllers/UsersListController.js';
-import {
-  getProductCountHandler,
-  getUserCountHandler,
-} from './controllers/countHandlers.js';
-import { getProductCountByCategoryHandler } from './controllers/getProductCountByCategoryHandler.js';
-import { logoutUser } from './controllers/logoutController.js';
-import { manageStock } from './controllers/manageStock.js';
-import { CurrentStockReportController } from './controllers/relatorios/CurrentStockReportController.js';
-import { UpdateStockController } from './controllers/updateStockController.js';
-import { isAdmin, isAuthenticated } from './middleware/auth.js';
+import { CurrentStockReportController } from './controllers/relatorios/CurrentStockReportController';
+import { LoginUserController } from './controllers/LoginUserController';
+import { RegisterUserController } from './controllers/RegisterUserController';
+import { getUsers } from './controllers/UsersListController';
+import { deleteUserHandler } from './controllers/DeleteUserController';
+import { isAdmin, isAuthenticated } from './middleware/auth';
+import { logoutUser } from './controllers/logoutController';
+import { CreateStockController } from './controllers/CreateStockController';
+import { UpdateStockController } from './controllers/updateStockController';
+import { ListStockController } from './controllers/ListStockController';
+import { getProductCountHandler, getUserCountHandler } from './controllers/countHandlers';
+import { getProductCountByCategoryHandler } from './controllers/getProductCountByCategoryHandler';
+import { getTotalSellingValueHandler } from './controllers/CountValueController';
+import { countLowStockProducts } from './controllers/CountStockLow';
+import { manageStock } from './controllers/manageStock';
+import { DeleteStockController } from './controllers/DeleteStockController';
+
 
 // Função responsável por definir as rotas da aplicação
 export async function routes(fastify: FastifyInstance) {

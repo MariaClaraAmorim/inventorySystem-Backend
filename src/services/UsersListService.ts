@@ -1,4 +1,4 @@
-import { prisma } from '../utils/prisma.js';
+import { prisma } from '../utils/prisma';
 
 // Função para listar todos os usuários do banco de dados
 export async function listUsers() {

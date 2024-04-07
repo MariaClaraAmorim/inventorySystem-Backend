@@ -1,4 +1,4 @@
-import prismaClient from '../prisma/index.js';
+import prismaClient from '../prisma/index';
 
 // Interface que define a estrutura dos parâmetros necessários para excluir um Estoque
 interface DeleteStockProps {

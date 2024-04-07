@@ -7,10 +7,9 @@
   },
   "type": "module",
   "scripts": {
-    "build": "prisma generate && tsup",
-    "dev": "tsup --watch",
-    "dev:render": "tsup --watch & npm run start:render",
-    "start:render": "node dist/serverless.js"
+    "build": "tsc",
+    "start": "node src/server.ts",
+    "dev": "tsx watch src/server.ts"
   },
   "keywords": [
     "fastify",

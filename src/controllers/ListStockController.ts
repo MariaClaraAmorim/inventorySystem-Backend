@@ -2,7 +2,7 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 
 // Importa a classe ListStockService do arquivo de serviço correspondente
-import { ListStockService } from '../services/ListStockService.js';
+import { ListStockService } from '../services/ListStockService';
 
 // Classe responsável por lidar com as requisições para listar estoque
 class ListStockController {
