@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entryPoints: ['src/server.ts'],
+  entryPoints: ['server.ts'],
   format: ['cjs'],
   clean: true,
   sourcemap: true,
