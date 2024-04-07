@@ -3,7 +3,7 @@
     "target": "es6",
     "module": "ESNext",
     "esModuleInterop": true,
-    "outDir": "./src/dist", // Atualizado para "./src/dist"
+    "outDir": "./dist", 
     "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
