@@ -1,6 +1,7 @@
-import bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
+import * as jwt from 'jsonwebtoken';
+
 import { FastifyReply, FastifyRequest } from 'fastify';
-import jwt from 'jsonwebtoken';
 import { findUserByUsername } from '../services/findUserByUsername';
 
 const SECRET_KEY = process.env.SECRET_KEY || 'sua_chave_secreta';

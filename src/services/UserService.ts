@@ -1,5 +1,5 @@
 import { PrismaClient, Role } from "@prisma/client";
-import bcrypt from "bcrypt";
+import * as bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
@@ -30,7 +30,7 @@ export async function createUser(
     return {
       id: user.id,
       username: user.username,
-      password: user.password, 
+      password: user.password,
       role: user.role,
     };
   } catch (error) {

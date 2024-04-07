@@ -6,7 +6,6 @@ import { LoginUserController } from './controllers/LoginUserController';
 import { RegisterUserController } from './controllers/RegisterUserController';
 import { getUsers } from './controllers/UsersListController';
 import { deleteUserHandler } from './controllers/DeleteUserController';
-import { isAdmin, isAuthenticated } from './middleware/auth';
 import { logoutUser } from './controllers/logoutController';
 import { CreateStockController } from './controllers/CreateStockController';
 import { UpdateStockController } from './controllers/updateStockController';
@@ -54,50 +53,29 @@ export async function routes(fastify: FastifyInstance) {
 
   // Rota para deletar um usuário
   fastify.delete('/delete-users/:userId', deleteUserHandler);
-
-  // Exemplo de rota que requer autenticação
-  fastify.get(
-    '/protected-route',
-    { preHandler: isAuthenticated },
-    async (request, reply) => {
-      reply.send({
-        message: 'Você está autenticado e tem acesso a esta rota.',
-      });
-    }
-  );
-
-  // Exemplo de rota que requer permissão de administrador
-  fastify.get(
-    '/admin-route',
-    { preHandler: isAdmin },
-    async (request, reply) => {
-      reply.send({
-        message: 'Você é um administrador e tem acesso a esta rota.',
-      });
-    }
-  );
-
-  /*  
-   // Rota para o administrador
+  /* 
+    // Exemplo de rota que requer autenticação
     fastify.get(
-      "/admin",
-      { preHandler: authorize("ADMIN") },
+      '/protected-route',
+      { preHandler: isAuthenticated },
       async (request, reply) => {
         reply.send({
-          message: "Esta rota é acessível apenas para administradores",
+          message: 'Você está autenticado e tem acesso a esta rota.',
         });
       }
     );
   
-    // Rota para o usuário comum
+    // Exemplo de rota que requer permissão de administrador
     fastify.get(
-      "/user",
-      { preHandler: authorize("USER") },
+      '/admin-route',
+      { preHandler: isAdmin },
       async (request, reply) => {
-        return { message: "Esta é uma rota privada do usuário" };
+        reply.send({
+          message: 'Você é um administrador e tem acesso a esta rota.',
+        });
       }
-    ); 
-    */
+    ); */
+
 
   // Rota para logout
   fastify.post(

@@ -1,7 +1,12 @@
-import { FastifyRequest, FastifyReply } from "fastify";
+/* import { FastifyRequest, FastifyReply } from "fastify";
+
+// Defina uma interface estendida que inclui a propriedade 'user'
+interface AuthenticatedRequest extends FastifyRequest {
+  user?: { role: string }; // Defina o tipo de 'user' conforme necessário
+}
 
 // Middleware para verificar se o usuário é um administrador
-export const isAdmin = async (request: FastifyRequest, reply: FastifyReply) => {
+export const isAdmin = async (request: AuthenticatedRequest, reply: FastifyReply) => {
   const user = request.user;
 
   if (!user || user.role !== 'ADMIN') {
@@ -14,7 +19,7 @@ export const isAdmin = async (request: FastifyRequest, reply: FastifyReply) => {
 };
 
 // Middleware para verificar se o usuário está autenticado
-export const isAuthenticated = async (request: FastifyRequest, reply: FastifyReply) => {
+export const isAuthenticated = async (request: AuthenticatedRequest, reply: FastifyReply) => {
   const user = request.user;
 
   if (!user) {
@@ -25,3 +30,4 @@ export const isAuthenticated = async (request: FastifyRequest, reply: FastifyRep
   // Se o usuário estiver autenticado, podemos prosseguir
   return;
 };
+ */
