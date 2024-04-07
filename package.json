@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node src/server.js",
+    "start": "node src/server.ts",
     "dev": "tsc --watch src/server.ts"
   },
   "keywords": [
