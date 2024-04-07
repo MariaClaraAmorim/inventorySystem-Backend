@@ -6,12 +6,10 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "tsc",
-    "build:render": "tsc && node src/dist/server.js", 
-    "start:render": "node src/dist/server.js",
-    "dev": "tsc --watch src/server.ts"
+    "dev": "tsx src/server.ts",
+    "build": "tsup src -d dist",
+    "start": "node dist/server.js"
   },
-  
   "keywords": [
     "fastify",
     "typescript",
