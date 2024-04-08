@@ -8,4 +8,4 @@ export default defineConfig({
   minify: false,
   target: 'node18',
   tsconfig: 'tsconfig.json',
-}); 
+});
