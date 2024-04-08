@@ -1,87 +1,81 @@
 ﻿# inventorySystem-Backend
-# Documentação das Rotas da Aplicação
+# Documentação da API
 
-Este documento fornece uma visão geral das rotas disponíveis na aplicação, juntamente com suas descrições.
+Este documento fornece uma visão geral das rotas disponíveis na API, juntamente com suas descrições.
 
 ## Rotas Disponíveis
 
 ### Rota de Teste
 
-#### GET /teste
-
-Rota de teste simples para verificar se o servidor está online.
-
-### Relatório do Estoque Atual
-
-#### GET /current-stock-report
-
-Rota para obter um relatório do estoque atual.
+- **Método:** GET
+- **Endpoint:** /api/teste
+- **Descrição:** Rota de teste simples para verificar se o servidor está online.
 
 ### Autenticação de Usuários
 
-#### POST /login
+- **Método:** POST
+- **Endpoint:** /api/login
+- **Descrição:** Rota para efetuar login de usuários.
 
-Rota para efetuar login de usuários.
-
-#### POST /register
-
-Rota para registrar um novo usuário.
+- **Método:** POST
+- **Endpoint:** /api/register
+- **Descrição:** Rota para registrar um novo usuário.
 
 ### Gerenciamento de Usuários
 
-#### GET /users
+- **Método:** GET
+- **Endpoint:** /api/users
+- **Descrição:** Rota para listar todos os usuários.
 
-Rota para listar todos os usuários.
+- **Método:** DELETE
+- **Endpoint:** /api/delete-users/:userId
+- **Descrição:** Rota para deletar um usuário específico.
 
-#### DELETE /delete-users/:userId
-
-Rota para deletar um usuário específico.
-
-#### POST /logout
-
-Rota para realizar logout de usuários.
+- **Método:** POST
+- **Endpoint:** /api/logout
+- **Descrição:** Rota para realizar logout de usuários.
 
 ### Gerenciamento de Estoque
 
-#### POST /register-stock
+- **Método:** POST
+- **Endpoint:** /api/register-stock
+- **Descrição:** Rota para registrar um novo produto no estoque.
 
-Rota para registrar um novo produto no estoque.
+- **Método:** PUT
+- **Endpoint:** /api/update-stock/:id
+- **Descrição:** Rota para atualizar um produto de estoque específico.
 
-#### PUT /update-stock/:id
+- **Método:** GET
+- **Endpoint:** /api/list-stock
+- **Descrição:** Rota para listar todos os produtos do estoque.
 
-Rota para atualizar um produto de estoque específico.
-
-#### GET /list-stock
-
-Rota para listar todos os produtos do estoque.
-
-#### DELETE /delete-stock
-
-Rota para excluir um produto do estoque.
+- **Método:** DELETE
+- **Endpoint:** /api/delete-stock
+- **Descrição:** Rota para excluir um produto do estoque.
 
 ### Estatísticas e Relatórios
 
-#### GET /products/count
+- **Método:** GET
+- **Endpoint:** /api/products/count
+- **Descrição:** Rota para obter a contagem total de produtos.
 
-Rota para obter a contagem total de produtos.
+- **Método:** GET
+- **Endpoint:** /api/users/count
+- **Descrição:** Rota para obter a contagem total de usuários.
 
-#### GET /users/count
+- **Método:** GET
+- **Endpoint:** /api/products/count-by-category
+- **Descrição:** Rota para obter a contagem de produtos por categoria.
 
-Rota para obter a contagem total de usuários.
+- **Método:** GET
+- **Endpoint:** /api/total-selling-value
+- **Descrição:** Rota para obter o valor total de venda dos produtos.
 
-#### GET /products/count-by-category
+- **Método:** GET
+- **Endpoint:** /api/stock/low-count
+- **Descrição:** Rota para obter a contagem de produtos com estoque baixo.
 
-Rota para obter a contagem de produtos por categoria.
-
-#### GET /total-selling-value
-
-Rota para obter o valor total de venda dos produtos.
-
-#### GET /stock/low-count
-
-Rota para obter a contagem de produtos com estoque baixo.
-
-#### POST /manage-stock
-
-Rota para gerenciar o estoque de produtos.
+- **Método:** POST
+- **Endpoint:** /api/manage-stock
+- **Descrição:** Rota para gerenciar o estoque de produtos.
 
