@@ -54,7 +54,7 @@ const start = async () => {
 
   try {
     // Inicia o servidor na porta 3333
-    await app.listen({ port: 3333 });
+    await app.listen({ port: 3333, host: '0.0.0.0' });
     console.log(`Server running at ${baseURL}`);
   } catch (err) {
     // Em caso de erro ao iniciar o servidor, encerra o processo
